@@ -1,0 +1,290 @@
+:root {
+    /* Primary Colors */
+    --moderate-violet: hsl(263, 55%, 52%);
+    --very-dark-grayish-blue: hsl(217, 19%, 35%);
+    --very-dark-blackish-blue: hsl(219, 29%, 14%);
+    --white: hsl(0, 0%, 100%);
+    /* Neutral Colors */
+    --light-gray: hsl(0, 0%, 81%);
+    --light-grayish-blue: hsl(210, 46%, 95%);
+    /* Text Colors with Opacity */
+    --name-color: hsl(217, 19%, 35%);
+    --verified-graduate-opacity: hsla(217, 19%, 35%, 0.5);
+    /* 50% opacity */
+    --review-text-opacity: hsla(217, 19%, 35%, 0.7);
+    /* 70% opacity */
+    /* Typography */
+    --body-font-size: 0.8125rem;
+    --bigger: 1.25rem;
+    --font-family-barlow: 'Barlow Semi Condensed', sans-serif;
+    --font-weight-regular: 500;
+    --font-weight-bold: 600;
+}
+
+
+/* My background colors */
+
+.moderate-violet-bg {
+    background-color: var(--moderate-violet);
+}
+
+.very-dark-grayish-blue-bg {
+    background-color: var(--very-dark-grayish-blue);
+}
+
+.very-dark-blackish-blue-bg {
+    background-color: var(--very-dark-blackish-blue);
+}
+
+.white-bg {
+    background-color: var(--white);
+}
+
+.light-gray-bg {
+    background-color: var(--light-gray);
+}
+
+
+/* My text colors */
+
+.text-white {
+    color: var(--white)
+}
+
+
+/* My opacity */
+
+.verified-graduate-white {
+    color: hsla(0, 0%, 100%, 0.5);
+}
+
+.verified-graduate-black {
+    color: hsla(0, 0%, 0%, 0.5);
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 1rem;
+}
+
+.flex,
+.flex h2,
+.flex p,
+.flex img {
+    margin: 0;
+    padding: 0;
+}
+
+.flex img {
+    border-radius: 50%;
+    width: 2rem;
+    object-fit: cover;
+    margin: 0;
+}
+
+.flex h2 {
+    margin: 0;
+    font-weight: var(--font-weight-regular);
+    font-size: var(--body-font-size);
+}
+
+h2,
+img {
+    margin: 0;
+}
+
+.flex h2 {
+    margin-bottom: 0.2rem;
+}
+
+.flex p {
+    margin-top: 0;
+}
+
+body {
+    display: grid;
+    place-content: center;
+    min-height: 100vh;
+    font-family: var(--font-family-barlow);
+    font-weight: var(--font-weight-regular);
+    background-color: hsl(0, 0%, 81%);
+}
+
+.font-size {
+    font-size: var(--bigger);
+}
+
+.testimonial-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    max-width: 75rem;
+    margin: 0 auto;
+    padding: 1rem;
+    grid-template-areas: 'one' 'two' 'three' 'four' 'five';
+    padding-block: 2rem;
+    width: min(95%, 70rem);
+    margin-inline: auto;
+}
+
+.testimonial:nth-child(1) {
+    grid-area: one;
+}
+
+.testimonial:nth-child(2) {
+    grid-area: two;
+}
+
+.testimonial:nth-child(3) {
+    grid-area: three;
+}
+
+.testimonial:nth-child(4) {
+    grid-area: four;
+}
+
+.testimonial:nth-child(5) {
+    grid-area: five;
+}
+
+@media screen and (min-width: 33em) {
+    .testimonial-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media screen and (min-width: 38em) {
+    .testimonial-grid {
+        grid-template-columns: repeat(2, 1fr);
+        /* Create two equal-width columns */
+    }
+    /* Span the first child across two columns */
+    .testimonial:nth-child(1) {
+        grid-area: one;
+        grid-column: 1 / span 2;
+        /* Span across both columns */
+    }
+    /* Position child 2 and 3 below child 1 in the left and right columns */
+    .testimonial:nth-child(2) {
+        grid-area: two;
+        grid-column: 1 / 2;
+        grid-row: 2;
+    }
+    .testimonial:nth-child(3) {
+        grid-area: three;
+        grid-column: 2 / 3;
+        grid-row: 2;
+        /* Still in the first column */
+    }
+    /* Span child 4 across both columns */
+    .testimonial:nth-child(4) {
+        grid-area: four;
+        grid-column: 1 / span 2;
+        grid-row: 3;
+        /* Span across both columns */
+    }
+    /* Child 5 spans vertically in the second column */
+    .testimonial:nth-child(5) {
+        grid-area: five;
+        grid-column: 1 /span 2;
+        /* Positioned in the second column */
+        grid-row: 4;
+        /* Span vertically across two rows */
+    }
+}
+
+@media screen and (min-width: 54em) {
+    .testimonial-grid {
+        grid-template-columns: repeat(2, 1fr);
+        /* Create two equal-width columns */
+    }
+    /* Span the first child across two columns */
+    .testimonial:nth-child(1) {
+        grid-area: one;
+        grid-column: 1 / span 2;
+        /* Span across both columns */
+    }
+    /* Position child 2 and 3 below child 1 in the left and right columns */
+    .testimonial:nth-child(2) {
+        grid-area: two;
+        grid-column: 1 / 2;
+        grid-row: 2;
+    }
+    .testimonial:nth-child(3) {
+        grid-area: three;
+        grid-column: 1 / 2;
+        grid-row: 3;
+        /* Still in the first column */
+    }
+    /* Span child 4 across both columns */
+    .testimonial:nth-child(4) {
+        grid-area: four;
+        grid-column: 1 / span 2;
+        grid-row: 4;
+        /* Span across both columns */
+    }
+    /* Child 5 spans vertically in the second column */
+    .testimonial:nth-child(5) {
+        grid-area: five;
+        grid-column: 2 /3;
+        /* Positioned in the second column */
+        grid-row: 2/4;
+        /* Span vertically across two rows */
+    }
+}
+
+@media screen and (min-width: 75em) {
+    .testimonial-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+    .testimonial:nth-child(1) {
+        grid-area: one;
+        grid-column: 1 / span 2;
+        grid-row: 1;
+    }
+    .testimonial:nth-child(2) {
+        grid-area: two;
+        grid-column: 3 / 4;
+        grid-row: 1;
+    }
+    .testimonial:nth-child(3) {
+        grid-area: three;
+        grid-column: 1 / 2;
+        grid-row: 2;
+    }
+    .testimonial:nth-child(4) {
+        grid-area: four;
+        grid-column: 2 / span 2;
+        grid-row: 2;
+    }
+    .testimonial:nth-child(5) {
+        grid-area: five;
+        grid-column: 4 / 5;
+        grid-row: 1 / span 2;
+    }
+}
+
+.testimonial {
+    font-size: var(--body-font-size);
+    padding: 2rem;
+    border-radius: 0.5rem;
+    box-shadow: 2.5rem 3.75rem 3rem -3rem hsl(var(--clr-secondary-400) / 0.25);
+}
+
+.testimonial img {
+    width: 1.75rem;
+    aspect-ratio: 1;
+    border-radius: 50%;
+}
+
+.bold-paragraph {
+    font-weight: var(--font-weight-bold);
+}
+
+.testimonial blockquote {
+    opacity: 0.7;
+    margin: 0;
+    padding: 0;
+}
