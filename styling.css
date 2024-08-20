@@ -103,6 +103,14 @@ img {
     margin-top: 0;
 }
 
+.testimonial:nth-child(1) {
+    position: relative;
+    background-image: url('images/bg-pattern-quotation.svg');
+    background-repeat: no-repeat;
+    background-position: top 0rem right 4rem;
+    background-size: 7.5rem 7.5rem;
+}
+
 body {
     display: grid;
     place-content: center;
@@ -123,30 +131,10 @@ body {
     max-width: 75rem;
     margin: 0 auto;
     padding: 1rem;
-    grid-template-areas: 'one' 'two' 'three' 'four' 'five';
     padding-block: 2rem;
     width: min(95%, 70rem);
     margin-inline: auto;
-}
-
-.testimonial:nth-child(1) {
-    grid-area: one;
-}
-
-.testimonial:nth-child(2) {
-    grid-area: two;
-}
-
-.testimonial:nth-child(3) {
-    grid-area: three;
-}
-
-.testimonial:nth-child(4) {
-    grid-area: four;
-}
-
-.testimonial:nth-child(5) {
-    grid-area: five;
+    position: relative;
 }
 
 @media screen and (min-width: 33em) {
@@ -162,32 +150,27 @@ body {
     }
     /* Span the first child across two columns */
     .testimonial:nth-child(1) {
-        grid-area: one;
         grid-column: 1 / span 2;
         /* Span across both columns */
     }
     /* Position child 2 and 3 below child 1 in the left and right columns */
     .testimonial:nth-child(2) {
-        grid-area: two;
         grid-column: 1 / 2;
         grid-row: 2;
     }
     .testimonial:nth-child(3) {
-        grid-area: three;
         grid-column: 2 / 3;
         grid-row: 2;
         /* Still in the first column */
     }
     /* Span child 4 across both columns */
     .testimonial:nth-child(4) {
-        grid-area: four;
         grid-column: 1 / span 2;
         grid-row: 3;
         /* Span across both columns */
     }
     /* Child 5 spans vertically in the second column */
     .testimonial:nth-child(5) {
-        grid-area: five;
         grid-column: 1 /span 2;
         /* Positioned in the second column */
         grid-row: 4;
@@ -202,32 +185,27 @@ body {
     }
     /* Span the first child across two columns */
     .testimonial:nth-child(1) {
-        grid-area: one;
         grid-column: 1 / span 2;
         /* Span across both columns */
     }
     /* Position child 2 and 3 below child 1 in the left and right columns */
     .testimonial:nth-child(2) {
-        grid-area: two;
         grid-column: 1 / 2;
         grid-row: 2;
     }
     .testimonial:nth-child(3) {
-        grid-area: three;
         grid-column: 1 / 2;
         grid-row: 3;
         /* Still in the first column */
     }
     /* Span child 4 across both columns */
     .testimonial:nth-child(4) {
-        grid-area: four;
         grid-column: 1 / span 2;
         grid-row: 4;
         /* Span across both columns */
     }
     /* Child 5 spans vertically in the second column */
     .testimonial:nth-child(5) {
-        grid-area: five;
         grid-column: 2 /3;
         /* Positioned in the second column */
         grid-row: 2/4;
@@ -240,27 +218,22 @@ body {
         grid-template-columns: repeat(4, 1fr);
     }
     .testimonial:nth-child(1) {
-        grid-area: one;
         grid-column: 1 / span 2;
         grid-row: 1;
     }
     .testimonial:nth-child(2) {
-        grid-area: two;
         grid-column: 3 / 4;
         grid-row: 1;
     }
     .testimonial:nth-child(3) {
-        grid-area: three;
         grid-column: 1 / 2;
         grid-row: 2;
     }
     .testimonial:nth-child(4) {
-        grid-area: four;
         grid-column: 2 / span 2;
         grid-row: 2;
     }
     .testimonial:nth-child(5) {
-        grid-area: five;
         grid-column: 4 / 5;
         grid-row: 1 / span 2;
     }
