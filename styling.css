@@ -117,7 +117,7 @@ body {
     min-height: 100vh;
     font-family: var(--font-family-barlow);
     font-weight: var(--font-weight-regular);
-    background-color: hsl(0, 0%, 81%);
+    background-color: #ecf2f7;
 }
 
 .font-size {
